@@ -1,7 +1,7 @@
 package kot
 
 fun main() {
-    val time = 15
+    val time = 14
     val goodWeather = false
     val doing = when {
         time in 6..22 && goodWeather -> "Go walking"
