@@ -3,8 +3,8 @@ package kot
 import javax.print.attribute.IntegerSyntax
 
 
-fun main() {
-    val a = 50
+fun main() { //метод в Котлине обозначается fun(ction)
+    val a = 50 // переменная val означает, что ей нельзя присвоить другое значение
     if (a < 40) {
         println("Меньше 40")
     } else if (a < 60) {
@@ -14,8 +14,8 @@ fun main() {
     }
 
     // if
-    var count = 800
-    val food = if (count > 500) {
+    var count = 800 // переменная var означает, что ей можно присвоить другое значение
+    val food = if (count > 500) { // if является выражением, т.е. может быть присвоена переменной
         count -= 500
         "Пицца"
     } else if (count > 200) {
@@ -70,17 +70,18 @@ fun main() {
 
     val temperature = 80
     val condition = when {
-        temperature < 100 -> {
-            "Вода находится в жидком состоянии"
-        }
-        temperature < 0 -> {
-            "Вода находится в твердом состоянии"
-        }
-        else -> {
-            "Вода находится в газообразном состоянии"
-        }
+        temperature < 100 -> "Вода находится в жидком состоянии"
+        temperature < 0 -> "Вода находится в твердом состоянии"
+        else -> "Вода находится в газообразном состоянии"
     }
     println(condition)
 
+    val b: String? = null
+    val c: String? = "98358"
+    val d: String? = ""
+    val result = (b?.length?:0) + (c?.length?:0) + (d?.length?:0)// b? означает, что переменная нулабельна, length?:0 означает, что если
+    //переменная = null, мы выдаем число 0
+
+    println(result)
 }
 
